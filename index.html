@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Undangan Pernikahan Fulan & Fulanah</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f5f0;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      text-align: center;
+    }
+    header {
+      background-color: #e0c097;
+      color: white;
+      padding: 2rem 1rem;
+    }
+    h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+    h2 { font-size: 1.5rem; color: #7e6545; }
+    .section {
+      padding: 2rem 1rem;
+    }
+    .countdown {
+      font-size: 1.8rem;
+      margin: 1rem 0;
+    }
+    .map, .rsvp, .gift, .guestbook {
+      margin: 2rem 0;
+    }
+    footer {
+      padding: 1rem;
+      background-color: #e0c097;
+      color: white;
+    }
+    input, textarea {
+      padding: 0.5rem;
+      width: 80%;
+      margin: 0.5rem auto;
+      display: block;
+    }
+    button {
+      padding: 0.7rem 1.5rem;
+      background-color: #7e6545;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <audio autoplay loop hidden>
+    <source src="https://example.com/musik-latar.mp3" type="audio/mpeg">
+  </audio>
+
+  <header>
+    <h1>Fulan & Fulanah</h1>
+    <p>Undangan Pernikahan</p>
+  </header>
+
+  <section class="section">
+    <h2>Assalamu’alaikum Warahmatullahi Wabarakatuh</h2>
+    <p>Dengan memohon rahmat dan ridha Allah SWT, kami mengundang Anda untuk hadir di acara pernikahan kami yang InsyaAllah akan diselenggarakan:</p>
+    <p><strong>Tanggal: Bulan Depan<br>Lokasi: Bogor</strong></p>
+    <div class="countdown" id="countdown">Menghitung waktu ke hari H...</div>
+  </section>
+
+  <section class="map section">
+    <h2>Lokasi Acara</h2>
+    <iframe src="https://www.google.com/maps?q=bogor&output=embed" width="90%" height="250" style="border:0;" allowfullscreen></iframe>
+  </section>
+
+  <section class="rsvp section">
+    <h2>RSVP Kehadiran</h2>
+    <input type="text" placeholder="Nama Anda" />
+    <input type="text" placeholder="Jumlah tamu" />
+    <button>Kirim</button>
+  </section>
+
+  <section class="gift section">
+    <h2>Hadiah Pernikahan</h2>
+    <p>Transfer ke: <br><strong>1234567890 (Bank Syariah)</strong><br>a.n Fulan</p>
+  </section>
+
+  <section class="galeri section">
+    <h2>Galeri Cinta</h2>
+    <img src="https://via.placeholder.com/150" alt="Foto 1" />
+    <img src="https://via.placeholder.com/150" alt="Foto 2" />
+    <img src="https://via.placeholder.com/150" alt="Foto 3" />
+  </section>
+
+  <section class="guestbook section">
+    <h2>Buku Tamu</h2>
+    <input type="text" placeholder="Nama Anda" />
+    <textarea placeholder="Ucapan..."></textarea>
+    <button>Kirim</button>
+  </section>
+
+  <footer>
+    <p>Terima kasih atas doa & kehadiran Anda. Wassalamu’alaikum Warahmatullahi Wabarakatuh.</p>
+  </footer>
+
+  <script>
+    // Countdown
+    const targetDate = new Date();
+    targetDate.setMonth(targetDate.getMonth() + 1);
+    targetDate.setDate(15); // contoh tanggal 15 bulan depan
+    targetDate.setHours(0, 0, 0, 0);
+
+    const countdown = document.getElementById("countdown");
+    setInterval(() => {
+      const now = new Date();
+      const diff = targetDate - now;
+      if (diff <= 0) {
+        countdown.innerHTML = "Hari pernikahan telah tiba!";
+        return;
+      }
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const mins = Math.floor((diff / (1000 * 60)) % 60);
+      countdown.innerHTML = `${days} hari, ${hours} jam, ${mins} menit lagi`;
+    }, 1000);
+  </script>
+</body>
+</html>
