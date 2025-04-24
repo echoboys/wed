@@ -1,127 +1,233 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Undangan Pernikahan Fulan & Fulanah</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f9f5f0;
-      margin: 0;
-      padding: 0;
-      color: #333;
-      text-align: center;
-    }
-    header {
-      background-color: #e0c097;
-      color: white;
-      padding: 2rem 1rem;
-    }
-    h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-    h2 { font-size: 1.5rem; color: #7e6545; }
-    .section {
-      padding: 2rem 1rem;
-    }
-    .countdown {
-      font-size: 1.8rem;
-      margin: 1rem 0;
-    }
-    .map, .rsvp, .gift, .guestbook {
-      margin: 2rem 0;
-    }
-    footer {
-      padding: 1rem;
-      background-color: #e0c097;
-      color: white;
-    }
-    input, textarea {
-      padding: 0.5rem;
-      width: 80%;
-      margin: 0.5rem auto;
-      display: block;
-    }
-    button {
-      padding: 0.7rem 1.5rem;
-      background-color: #7e6545;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan Fulan & Fulanah</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #F5F5F5;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: url('https://via.placeholder.com/1920x600.png?text=Islamic+Pattern') no-repeat center center;
+            background-size: cover;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3em;
+            margin: 0;
+            color: gold;
+        }
+
+        .countdown {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: white;
+            margin-top: 20px;
+        }
+
+        section {
+            padding: 40px 10%;
+            text-align: center;
+        }
+
+        .rsvp-form,
+        .guestbook,
+        .gallery {
+            margin-bottom: 40px;
+        }
+
+        .rsvp-button,
+        .guestbook-button {
+            background-color: #2F855A;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .rsvp-button:hover,
+        .guestbook-button:hover {
+            background-color: #276749;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            margin: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .guestbook {
+            text-align: left;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .guestbook input,
+        .guestbook textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .guestbook button {
+            background-color: #FFCC00;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 1.1em;
+            border-radius: 5px;
+        }
+
+        .music-player {
+            text-align: center;
+            margin: 20px;
+        }
+
+        footer {
+            background-color: #2F855A;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .map {
+            height: 400px;
+            width: 100%;
+            margin: 20px 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            section {
+                padding: 40px 5%;
+            }
+        }
+    </style>
 </head>
+
 <body>
-  <audio autoplay loop hidden>
-    <source src="https://example.com/musik-latar.mp3" type="audio/mpeg">
-  </audio>
 
-  <header>
-    <h1>Fulan & Fulanah</h1>
-    <p>Undangan Pernikahan</p>
-  </header>
+    <!-- Header Section -->
+    <header>
+        <h1>Fulan & Fulanah</h1>
+        <div class="countdown">
+            <p>Countdown to the big day:</p>
+            <div id="countdown"></div>
+        </div>
+    </header>
 
-  <section class="section">
-    <h2>Assalamu’alaikum Warahmatullahi Wabarakatuh</h2>
-    <p>Dengan memohon rahmat dan ridha Allah SWT, kami mengundang Anda untuk hadir di acara pernikahan kami yang InsyaAllah akan diselenggarakan:</p>
-    <p><strong>Tanggal: Bulan Depan<br>Lokasi: Bogor</strong></p>
-    <div class="countdown" id="countdown">Menghitung waktu ke hari H...</div>
-  </section>
+    <!-- RSVP Section -->
+    <section>
+        <h2>RSVP</h2>
+        <p>We'd love to have you with us on this special day!</p>
+        <button class="rsvp-button">Confirm Your Attendance</button>
+    </section>
 
-  <section class="map section">
-    <h2>Lokasi Acara</h2>
-    <iframe src="https://www.google.com/maps?q=bogor&output=embed" width="90%" height="250" style="border:0;" allowfullscreen></iframe>
-  </section>
+    <!-- Guestbook Section -->
+    <section>
+        <h2>Guest Book</h2>
+        <div class="guestbook">
+            <form action="#" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <textarea name="message" rows="4" placeholder="Leave a message for us..." required></textarea>
+                <button type="submit">Submit Your Message</button>
+            </form>
+        </div>
+    </section>
 
-  <section class="rsvp section">
-    <h2>RSVP Kehadiran</h2>
-    <input type="text" placeholder="Nama Anda" />
-    <input type="text" placeholder="Jumlah tamu" />
-    <button>Kirim</button>
-  </section>
+    <!-- Gallery Section -->
+    <section>
+        <h2>Our Journey</h2>
+        <div class="gallery">
+            <img src="https://via.placeholder.com/600x400.png?text=Wedding+Photo+1" alt="Photo 1">
+            <img src="https://via.placeholder.com/600x400.png?text=Wedding+Photo+2" alt="Photo 2">
+            <img src="https://via.placeholder.com/600x400.png?text=Wedding+Photo+3" alt="Photo 3">
+        </div>
+    </section>
 
-  <section class="gift section">
-    <h2>Hadiah Pernikahan</h2>
-    <p>Transfer ke: <br><strong>1234567890 (Bank Syariah)</strong><br>a.n Fulan</p>
-  </section>
+    <!-- Music Player Section -->
+    <div class="music-player">
+        <audio controls autoplay>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
 
-  <section class="galeri section">
-    <h2>Galeri Cinta</h2>
-    <img src="https://via.placeholder.com/150" alt="Foto 1" />
-    <img src="https://via.placeholder.com/150" alt="Foto 2" />
-    <img src="https://via.placeholder.com/150" alt="Foto 3" />
-  </section>
+    <!-- Google Map Section -->
+    <section>
+        <h2>Event Location</h2>
+        <div class="map" id="map"></div>
+    </section>
 
-  <section class="guestbook section">
-    <h2>Buku Tamu</h2>
-    <input type="text" placeholder="Nama Anda" />
-    <textarea placeholder="Ucapan..."></textarea>
-    <button>Kirim</button>
-  </section>
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Fulan & Fulanah. All rights reserved.</p>
+        <p>Follow us: <a href="#">Instagram</a> | <a href="#">Facebook</a></p>
+    </footer>
 
-  <footer>
-    <p>Terima kasih atas doa & kehadiran Anda. Wassalamu’alaikum Warahmatullahi Wabarakatuh.</p>
-  </footer>
+    <!-- Countdown Script -->
+    <script>
+        function countdownTimer() {
+            const weddingDate = new Date("2025-05-01T10:00:00").getTime();
+            const x = setInterval(function() {
+                const now = new Date().getTime();
+                const distance = weddingDate - now;
 
-  <script>
-    // Countdown
-    const targetDate = new Date();
-    targetDate.setMonth(targetDate.getMonth() + 1);
-    targetDate.setDate(15); // contoh tanggal 15 bulan depan
-    targetDate.setHours(0, 0, 0, 0);
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    const countdown = document.getElementById("countdown");
-    setInterval(() => {
-      const now = new Date();
-      const diff = targetDate - now;
-      if (diff <= 0) {
-        countdown.innerHTML = "Hari pernikahan telah tiba!";
-        return;
-      }
-      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-      const mins = Math.floor((diff / (1000 * 60)) % 60);
-      countdown.innerHTML = `${days} hari, ${hours} jam, ${mins} menit lagi`;
-    }, 1000);
-  </script>
+                document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("countdown").innerHTML = "It's Wedding Day!";
+                }
+            }, 1000);
+        }
+        countdownTimer();
+    </script>
+
+    <!-- Google Map Script -->
+    <script>
+        function initMap() {
+            var weddingLocation = { lat: -6.5954, lng: 106.7889 };
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: weddingLocation
+            });
+            var marker = new google.maps.Marker({
+                position: weddingLocation,
+                map: map
+            });
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap"></script>
+
 </body>
+
 </html>
