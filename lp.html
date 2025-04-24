@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Estech — Solusi Digital Modern</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #2d6a4f;
+      --secondary: #40916c;
+      --bg: #f8f9fa;
+      --text: #212529;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header {
+      background: var(--primary);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+    .btn {
+      background: var(--secondary);
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1em;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .services, .portfolio {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .card h3 {
+      margin-bottom: 10px;
+    }
+    .testimonial {
+      font-style: italic;
+      background: white;
+      padding: 20px;
+      border-left: 5px solid var(--primary);
+      margin: 20px 0;
+      border-radius: 5px;
+    }
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background: var(--primary);
+      color: white;
+    }
+    footer a {
+      color: #fff;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <header>
+    <h1>Estech Digital</h1>
+    <p>Solusi digital modern: desain, website, sistem otomatis, dan produk kreatif</p>
+    <a href="https://wa.me/6281234567890" class="btn">Konsultasi Sekarang</a>
+  </header>
+
+  <!-- Tentang -->
+  <section>
+    <h2>Tentang Kami</h2>
+    <p>Estech adalah studio digital modern yang fokus pada solusi desain, pengembangan website, sistem automation, dan branding digital. Kami bantu kamu terlihat profesional dan efisien di era digital.</p>
+  </section>
+
+  <!-- Layanan -->
+  <section>
+    <h2>Layanan Kami</h2>
+    <div class="services">
+      <div class="card">
+        <h3>Branding & Desain</h3>
+        <p>Logo, identitas visual, hingga desain produk dan sosial media.</p>
+      </div>
+      <div class="card">
+        <h3>Website & Landing Page</h3>
+        <p>Dari portfolio hingga toko online. Mobile-first & cepat!</p>
+      </div>
+      <div class="card">
+        <h3>Automation & Tools</h3>
+        <p>Bot, sistem kasir, link-in-bio, dan solusi digital lainnya.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portofolio -->
+  <section>
+    <h2>Portofolio</h2>
+    <div class="portfolio">
+      <div class="card">
+        <h3>Branding: Halal Market</h3>
+        <p>Desain logo dan sistem visual untuk UMKM lokal.</p>
+      </div>
+      <div class="card">
+        <h3>Landing Page: Event Digital</h3>
+        <p>Konversi tinggi dan bisa custom domain di Vercel.</p>
+      </div>
+      <div class="card">
+        <h3>Tool: WhatsApp Notifier</h3>
+        <p>Integrasi form + WhatsApp otomatis tanpa kode.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimoni -->
+  <section>
+    <h2>Apa Kata Klien</h2>
+    <div class="testimonial">
+      “Desainnya elegan, proses cepat dan responsif banget. Estech ngebantu banget buat bisnis onlineku tampil profesional.”
+      <br><strong>— Nabila, Founder TokoFlora</strong>
+    </div>
+  </section>
+
+  <!-- CTA Kontak -->
+  <section style="text-align: center;">
+    <h2>Siap Digitalin Bisnismu?</h2>
+    <p>Konsultasi gratis dulu aja. Klik tombol di bawah!</p>
+    <a href="https://wa.me/6281234567890" class="btn">Hubungi Kami via WhatsApp</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Estech. Dibuat dengan semangat & kopi ☕ | <a href="#">Instagram</a>
+  </footer>
+
+</body>
+</html>
